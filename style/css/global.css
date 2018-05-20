@@ -664,7 +664,7 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
 
 .header__social-icons {
   float: right;
-  margin-left: 50px;
+  margin-left: 40px;
   margin-top: 16px;
 }
 
@@ -1849,7 +1849,7 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
   clear: both;
 }
 
-.footer__copyright,.footer__image {
+.footer__copyright{
   font-size: 26px;
   float: left;
   color: #696969;
@@ -1857,8 +1857,11 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
   line-height: 90px;
 }
 
-.footer__image {
+.blog__link {
   float: right;
+  color: #696969;
+  line-height: 96px;
+  font-size: 18px;
 }
 
 /*------------------------------------*	(max-width: 1300px)
@@ -2269,7 +2272,7 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
 /*------------------------------------*	(max-width: 720px)
 \*------------------------------------*/
 @media (max-width: 720px) {
-  .footer__copyright, .footer__image {
+  .footer__copyright, .blog__link {
     float: left;
     margin-top: 10px;
     width: 100%;
@@ -2895,4 +2898,17 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
   }
 }
 
-/*# sourceMappingURL=global.css.map */
+.scrollToTop{
+  padding: 20px 16px;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #444;
+  position: fixed;
+  bottom: 190px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+  z-index: 212;
+}

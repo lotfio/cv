@@ -17,8 +17,8 @@
 	<link rel="shortcut icon" href="style/img/logo.ico">
 
 	<!-- Fonts -->
-	<link href="style/fonts/webfont-raleway/webfont-raleway.css" rel="stylesheet">
-	<link href="style/fonts/webfont-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="style/fonts/webfont-raleway.css" rel="stylesheet">
+	<link href="style/css/fontello.css" rel="stylesheet">
 
 	<!-- Stylesheets -->
 	<link href="style/css/global.css" rel="stylesheet" media="all">
@@ -76,8 +76,8 @@
 			</a>
 
 			<div class="header__social-icons">
-				<a target="_blank" href="https://stackoverflow.com/users/6685361"><i class="fa fa-stack-overflow"></i></a>
-				<a target="_blank" href="https://github.com/lotfio/"><i class="fa fa-github"></i></a>
+				<a target="_blank" href="https://stackoverflow.com/users/6685361"><i class="fa fa-stackoverflow"></i></a>
+				<a target="_blank" href="https://github.com/lotfio/"><i class="fa fa-github-circled"></i></a>
 				<a target="_blank" href="https://twitter.com/_lotfio"><i class="fa fa-twitter"></i></a>
 				<a target="_blank" href="https://www.facebook.com/lotfio.lakehal"><i class="fa fa-facebook"></i></a>
 				<a target="_blank" href="https://linkedin.com/in/lotfio"><i class="fa fa-linkedin"></i></a>
@@ -113,7 +113,7 @@
 					  I am a web developer (full-stack developer). I spend my whole day, practically every day, experimenting with PHP , Python and JavaScript. dabbling with Linux and nginx and inhaling a wide variety of useful packages such as laravel, psr, phpunit, carbon, whoops, doctrine, aven, ouch, guzzle and many more.
 				</div>
 				<div class="hero__call-to-action">
-					<a href="#" target="_blank" class="hero__button  ghost-button  ghost-button--hero">Download Resume &nbsp; <i class="fa fa-download"></i></a>
+					<a href="#" class="hero__button  ghost-button  ghost-button--hero">Download Resume &nbsp; <i class="fa fa-download"></i></a>
 					<a href="https://linkedin.com/in/lotfio" target="_blank" class="hero__alt-button">...or find out more about me.</a>
 				</div>
 			</div>
@@ -609,15 +609,15 @@
 
 				<div class="contact__icons-wrapper">
 					<div class="contact__icon">
-						<a target="_blank" href="mailto:contact@lotfio.net"><i class="fa fa-envelope"></i></a>
+						<a target="_blank" href="mailto:contact@lotfio.net"><i class="fa fa-mail-alt"></i></a>
 						<div class="contact__icon-description">contact@lotfio.net</div>
 					</div>
 					<div class="contact__icon">
-						<a target="_blank" href="https://twitter.com/lotfilo_lakehal"><i class="fa fa-twitter"></i></a>
+						<a target="_blank" href="https://twitter.com/_lotfilo"><i class="fa fa-twitter"></i></a>
 						<div class="contact__icon-description">@_lotfio</div>
 					</div>
 					<div class="contact__icon">
-						<a target="_blank" href="https://github.com/lotfio"><i class="fa fa-github"></i></a>
+						<a target="_blank" href="https://github.com/lotfio"><i class="fa fa-github-circled"></i></a>
 						<div class="contact__icon-description">lotfio</div>
 					</div>
 				</div>
@@ -649,11 +649,11 @@
 						<div class="contact__button-wrapper  ghost-button  ghost-button--contact">
 							<div class="contact__paper-plane-wrapper"><i class="fa fa-paper-plane"></i></div>
 							<div class="contact__response  contact__response--success">
-								<div class="contact__response-title"><i class="fa fa-check"></i> Message was sent.</div>
+								<div class="contact__response-title"><i class="fa fa-ok"></i> Message was sent.</div>
 								<div class="contact__response-description  contact__response-description--success">&nbsp;</div>
 							</div>
 							<div class="contact__response  contact__response--error">
-								<div class="contact__response-title"><i class="fa fa-warning"></i> Error.</div>
+								<div class="contact__response-title"><i class="fa  fa-attention-alt"></i> Error.</div>
 								<div class="contact__response-description  contact__response-description--error">Message couldn't be sent.</div>
 							</div>
 							<input type="hidden" name="send__email">
@@ -677,14 +677,12 @@
 
 
 
-
-
 		<!-- Footer -->
 		<footer id="footer" class="footer">
 			<div class="footer__wrapper">
 				<div class="footer__copyright">All Rights Reserved &copy; 2018</div>
 				
-				<div class="footer__image">Lotfio Lakehal</div>
+				<div class="blog__link">Check out my <b><a href="https://blog.lotfio.net"> Blog </a></b></div>
 			</div>
 		</footer>
 		<!-- End Footer -->
@@ -699,7 +697,7 @@
 	</div>
 	<!-- End Scrollable Content -->
 
-
+	<span class="scrollToTop">Top</span>
 
 
 	<!-- Scripts postload -->
