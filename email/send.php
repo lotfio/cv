@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * just a quick stupid email sender
+ */
 if(isset($_POST))
 {
 
