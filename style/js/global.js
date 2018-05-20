@@ -316,7 +316,90 @@ $(document).ready(function(){
 	});
 
 
+	/**
+	 * show only nedded images for best loading speed
+	 */
+	 $('.showcase img').on('click', function(){
 
+	 	var project = $(this).data('project');
+
+	 		var slides   = $('[data-project="' + project +'"] .rslides').children();
+	 		
+
+		switch(project) {
+
+	    case "p2":
+
+	    		images = [
+	    			'pro/mir-1.jpg',
+	    			'pro/mir-2.jpg',
+	    			'pro/mir-3.jpg',
+	    			'pro/mira-1.jpg',
+	    		];
+
+	    		for (var i = 0; i < slides.length; i++)
+	    		{
+
+	    			link = $('#' + slides[i].id + ' a').attr('href', images[i]);
+	    			img  = $('#' + slides[i].id + ' a img').attr('src', images[i]);
+	    		}
+
+	        break;
+	    case "p3":
+	        	images = [
+	    			'pro/for-1.jpg',
+	    			'pro/for-2.jpg',
+	    			'pro/for-3.jpg',
+	    			'pro/for-4.jpg',
+	    		];
+
+	    		for (var i = 0; i < slides.length; i++)
+	    		{
+
+	    			link = $('#' + slides[i].id + ' a').attr('href', images[i]);
+	    			img  = $('#' + slides[i].id + ' a img').attr('src', images[i]);
+	    		}
+
+	        break;				    
+	    case "p4":
+
+
+	         	images = [
+	    			'pro/saida-3.jpg',
+	    			'pro/saida-2.jpg',
+	    			'pro/saida-1.jpg',
+	    		];
+
+	    		for (var i = 0; i < slides.length; i++)
+	    		{
+
+	    			link = $('#' + slides[i].id + ' a').attr('href', images[i]);
+	    			img  = $('#' + slides[i].id + ' a img').attr('src', images[i]);
+	    		}
+
+
+	        break;				        
+	    case "p5":
+	       		
+	       		images = [
+	    			'pro/sil-1.jpg',
+	    			'pro/sil-2.jpg',
+	    			'pro/sil-3.jpg',
+	    		];
+
+	    		for (var i = 0; i < slides.length; i++)
+	    		{
+
+	    			link = $('#' + slides[i].id + ' a').attr('href', images[i]);
+	    			img  = $('#' + slides[i].id + ' a img').attr('src', images[i]);
+	    		}
+	        break;
+	        
+	    default:
+	        //code block
+	}
+		
+});
 
 
 

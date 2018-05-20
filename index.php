@@ -384,31 +384,10 @@
 						<div data-project="p2" class="showcase__stage">
 							<div class="showcase__slider">
 								<ul class="rslides">
-
-									<li>
-										<a href="pro/mir-1.jpg" target="_blank">
-											<img src="pro/mir-1.jpg">
-										</a>
-									</li>
-
-									<li>
-										<a href="pro/mir-2.jpg" target="_blank">
-											<img src="pro/mir-2.jpg">
-										</a>
-									</li>
-
-									<li>
-										<a href="pro/mir-3.jpg" target="_blank">
-											<img src="pro/mir-3.jpg">
-										</a>
-									</li>
-
-									<li>
-										<a href="pro/mira-1.jpg" target="_blank">
-											<img src="pro/mira-1.jpg">
-										</a>
-									</li>
-
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
 								</ul>
 							</div>
 							<div class="showcase__infos-wrapper">
@@ -446,27 +425,10 @@
 						<div data-project="p3" class="showcase__stage">
 							<div class="showcase__slider">
 								<ul class="rslides">
-									<li>
-										<a href="pro/for-1.jpg" target="_blank">
-											<img src="pro/for-1.jpg">
-										</a>
-									</li>								
-									<li>
-										<a href="pro/for-2.jpg" target="_blank">
-											<img src="pro/for-2.jpg">
-										</a>
-									</li>								
-									<li>
-										<a href="pro/for-3.jpg" target="_blank">
-											<img src="pro/for-3.jpg">
-										</a>
-									</li>								
-									<li>
-										<a href="pro/for-4.jpg" target="_blank">
-											<img src="pro/for-4.jpg">
-										</a>
-									</li>
-								</ul>
+								<li><a href="#" target="_blank"><img src="#"></a></li>
+								<li><a href="#" target="_blank"><img src="#"></a></li>
+								<li><a href="#" target="_blank"><img src="#"></a></li>
+								<li><a href="#" target="_blank"><img src="#"></a></li>
 							</div>
 							<div class="showcase__infos-wrapper">
 								<div class="showcase__title">Fordev</div>
@@ -501,9 +463,9 @@
 						<div data-project="p4" class="showcase__stage">
 							<div class="showcase__slider">
 								<ul class="rslides">
-									<li><img src="pro/saida-3.jpg"></li>
-									<li><img src="pro/saida-2.jpg"></li>
-									<li><img src="pro/saida-1.jpg"></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
 								</ul>
 							</div>
 							<div class="showcase__infos-wrapper">
@@ -538,10 +500,10 @@
 						<!-- project 5 -->
 						<div data-project="p5" class="showcase__stage">
 							<div class="showcase__slider">
-								<ul class="rslides">
-									<li><img src="pro/sil-1.jpg"></li>
-									<li><img src="pro/sil-2.jpg"></li>
-									<li><img src="pro/sil-3.jpg"></li>
+								<ul class="rslides">			
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
+									<li><a href="#" target="_blank"><img src="#"></a></li>
 								</ul>
 							</div>
 							<div class="showcase__infos-wrapper">
