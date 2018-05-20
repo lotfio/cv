@@ -221,8 +221,9 @@ $(document).ready(function(){
 		which communicates with
 		contact_form.php
 	\*------------------------------------*/
-	$("#submit").click(function(event) {
-		event.preventDefault();
+	$("#submit").on('click', function(e) {
+
+		e.preventDefault();
 
 		var proceed = true;
 
@@ -231,7 +232,7 @@ $(document).ready(function(){
 			//get input field values data to be sent to server
 			post_data = {
 				'name'      : String( $('#name').val() ),
-				'email'     : String( $('#_email').val() ),
+				'email'     : String( $('#email').val() ),
 				'content'  : String( $('#content').val() )
 			};
 
@@ -239,46 +240,61 @@ $(document).ready(function(){
 			//Ajax post data to server
 			$.post('email/send.php', post_data, function(response)
 			{
-
  				//load json data from server and output message
 				//it probably should be refactored a bit...
  				switch (response.type) {
 
- 					case "error_content":
+ 					case "error_message_content":
+
 						$(".contact__response-ajax-text").hide();
 						$(".contact__textarea-wrapper .contact__response-ajax-text").css("display","inline-block").text(response.text);
 
 						$("#content, #name, #email").css("box-shadow","none");
-						//$("#content").css("box-shadow","0 0 10px 0 rgba(255,0,0,0.5)");
+						$("#content").css("border", "1.2px solid red");
 						break;
 
- 					case "error_name":
+ 					case "error_sender_name":
 						$(".contact__response-ajax-text").hide();
 						$(".contact__input-wrapper--name .contact__response-ajax-text").css("display","inline-block").text(response.text);
 
 						$("#content, #name, #email").css("box-shadow","none");
-						//$("#name").css("box-shadow","0 0 10px 0 rgba(255,0,0,0.5)");
+						$("#content").css("border", "0");
+						$("#name").css("border", "1.2px solid red");
 						break;
 
- 					case "error_email":
+ 					case "error_sender_email":
 						$(".contact__response-ajax-text").hide();
 						$(".contact__input-wrapper--email .contact__response-ajax-text").css("display","inline-block").text(response.text);
 
 						$("#content, #name, #email").css("box-shadow","none");
-						//$("#email").css("box-shadow","0 0 10px 0 rgba(255,0,0,0.5)");
+						$("#email").css("border", "1.2px solid red");
+						$("#content").css("border", "0");
+						$("#name").css("border", "0");
 						break;
 
 					default:
+						
+						$("#email").css("border", "0");
 						$(".contact__response-ajax-text").hide();
-
 						$("#content, #name, #email").css("box-shadow","none");
 						$(".contact__button-wrapper").removeClass("ghost-button");
 						$(".contact__button-wrapper").addClass("contact__button-wrapper--sent");
 						$(".contact__paper-plane-wrapper").addClass("contact__paper-plane-wrapper--takeoff");
+
 						$(".contact__response-description--success").html(response.text);
-						$(".contact__response--success").delay(500).fadeIn(100);
-						//$(".contact__form input, .contact__form textarea").val("");
+
+						if(response.type == 'error')
+						{
+							$(".contact__response--error").delay(500).fadeIn(100);
+
+						} else{
+							
+							$(".contact__form input, .contact__form textarea").val("");
+							$(".contact__response--success").delay(500).fadeIn(100);
+						}
+
 						$("#submit").unbind('click');
+
 				}
 
 			}, 'json');

@@ -428,12 +428,14 @@
 								<div class="showcase__point">
 									<div class="showcase__point-title">Description :</div>
 									<div class="showcase__point-details-excerpt">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<span class="showcase__ellipsis">...</span>
-										<span class="showcase__readmore">more</span>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+										<span class="showcase__ellipsis"> ... </span>
+										<span class="showcase__readmore"> more </span>
 									</div>
 									<div class="showcase__point-details-full">
-										ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										<span class="showcase__readless">less</span>
+										  <br>This platform has an independet Admin Panel wich allows the admins of the 
+										company to manage different tasks like adding customers, adding partners, advertising new products, generating invoices.
+										<span class="showcase__readless"> less </span>
 									</div>
 								</div>
 								<a target="_blank" href="mondemir.com" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
@@ -484,11 +486,11 @@
 									<div class="showcase__point-title">Description :</div>
 									<div class="showcase__point-details-excerpt">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<span class="showcase__ellipsis">...</span>
-										<span class="showcase__readmore">more</span>
+										<span class="showcase__readmore"> more </span>
 									</div>
 									<div class="showcase__point-details-full">
 										ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										<span class="showcase__readless">less</span>
+										<span class="showcase__readless"> less </span>
 									</div>
 								</div>
 								<a target="_blank" href="###" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
@@ -522,11 +524,11 @@
 									<div class="showcase__point-title">Description :</div>
 									<div class="showcase__point-details-excerpt">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<span class="showcase__ellipsis">...</span>
-										<span class="showcase__readmore">more</span>
+										<span class="showcase__readmore"> more </span>
 									</div>
 									<div class="showcase__point-details-full">
 										ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										<span class="showcase__readless">less</span>
+										<span class="showcase__readless"> less </span>
 									</div>
 								</div>
 								<a target="_blank" href="###" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
@@ -560,11 +562,11 @@
 									<div class="showcase__point-title">Description :</div>
 									<div class="showcase__point-details-excerpt">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<span class="showcase__ellipsis">...</span>
-										<span class="showcase__readmore">more</span>
+										<span class="showcase__readmore"> more </span>
 									</div>
 									<div class="showcase__point-details-full">
 										ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										<span class="showcase__readless">less</span>
+										<span class="showcase__readless"> less </span>
 									</div>
 								</div>
 								<a target="_blank" href="silverengine.net" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
@@ -622,12 +624,12 @@
 
 				<div class="contact__spacer">&nbsp;</div>
 
-				<form class="contact__form">
+				<form action="email/send.php" class="contact__form" method="POST">
 
 					<div class="contact__textarea-wrapper">
 						<label for="message_content" class="contact__label">Message</label>
 						<div class="contact__response-ajax-text">&nbsp;</div>
-						<textarea id="content" rows="10" placeholder="Hello! Would you be interested in collaboration for the greatest project ever?" required></textarea>
+						<textarea id="content" name="content" rows="10" placeholder="Hello! Would you be interested in collaboration for the greatest project ever?" required></textarea>
 					</div>
 
 					<div class="contact__bottom-wrapper">
@@ -635,12 +637,12 @@
 							<div class="contact__input-wrapper  contact__input-wrapper--name">
 								<label for="sender_name" class="contact__label">Your Name</label>
 								<div class="contact__response-ajax-text">&nbsp;</div>
-								<input id="name" type="text" placeholder="John Kowalski" required>
+								<input id="name" type="text" name="name" placeholder="Khaled zanjabil" required>
 							</div>
 							<div class="contact__input-wrapper  contact__input-wrapper--email">
 								<label for="sender_email" class="contact__label">Your E-mail</label>
 								<div class="contact__response-ajax-text">&nbsp;</div>
-								<input id="email" type="email" placeholder="john@example.com" required>
+								<input id="email" name="email" type="email" placeholder="khaled@zanjabil.net" required>
 							</div>
 						</div>
 
@@ -654,6 +656,7 @@
 								<div class="contact__response-title"><i class="fa fa-warning"></i> Error.</div>
 								<div class="contact__response-description  contact__response-description--error">Message couldn't be sent.</div>
 							</div>
+							<input type="hidden" name="send__email">
 							<input id="submit" type="button" value=" ">
 						</div>
 					</div>

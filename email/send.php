@@ -1,18 +1,10 @@
 <?php
 
-if($_POST)
+if(isset($_POST))
 {
 
-
-
-
-
-	/*------------------------------------*\
-		Validation
-	\*------------------------------------*/
-
 	//check if its an ajax request, exit if not
-	if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest')
+	if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) OR strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest')
 	{
 		$output = json_encode(array( //create JSON data
 			'type' => 'error',
@@ -22,29 +14,26 @@ if($_POST)
 	}
 
 	//Sanitize input data using PHP filter_var().
-	$sender_name        = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
-	$sender_email       = filter_var($_POST["sender_email"], FILTER_SANITIZE_EMAIL);
-	$message_content    = filter_var($_POST["message_content"], FILTER_SANITIZE_STRING);
+	$sender_name        = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
+	$message_content    = filter_var($_POST["content"], FILTER_SANITIZE_STRING);
+	$sender_email       = $_POST["email"];
 
 	//additional php validation
-	if(strlen($message_content)<3) //check empty message
+	if(strlen($message_content) < 3 ) //check empty message
 	{
 		$output = json_encode(array('type'=>'error_message_content', 'text' => 'Message content is too short.'));
 		die($output);
 	}
-	if(strlen($sender_name)<3) // If length is less than 3 it will output JSON error.
+	if(strlen($sender_name) < 3 ) // If length is less than 3 it will output JSON error.
 	{
 		$output = json_encode(array('type'=>'error_sender_name', 'text' => 'Provided name is too short.'));
 		die($output);
 	}
-	if(!filter_var($sender_email, FILTER_VALIDATE_EMAIL)) //email validation
+	if(filter_var($sender_email, FILTER_VALIDATE_EMAIL) === false) //email validation
 	{
 		$output = json_encode(array('type'=>'error_sender_email', 'text' => 'E-mail format is incorrect.'));
 		die($output);
 	}
-
-
-
 
 
 	/*------------------------------------*\
@@ -52,7 +41,7 @@ if($_POST)
 	\*------------------------------------*/
 
 	//Recipient email, Replace with own email here
-	$to_email = "mail@example.com";
+	$to_email = "contact@lotfio.net";
 
 	//email headers
 	$headers  = "Content-type: text/html; charset=utf-8" . "\r\n";
@@ -69,10 +58,6 @@ if($_POST)
 	//send mail function
 	$send_mail = mail($to_email, $message_subject, $message_body, $headers);
 
-
-
-
-
 	/*------------------------------------*\
 		E-mail status
 	\*------------------------------------*/
@@ -80,19 +65,13 @@ if($_POST)
 	//If mail couldn't be sent output error. Check your PHP email configuration.
 	if(!$send_mail)
 	{
-		$output = json_encode(array('type'=>'error', 'text' => 'There was an error while sending message.'));
+		$output = json_encode(array('type'=>'error', 'text' => 'There was an error while sending the message.'));
 		die($output);
 	}
 	else
 	{
-		$output = json_encode(array('type'=>'message', 'text' => 'Thanks for message, ' . $sender_name . '. <br> I will reply as fast as I can.'));
+		$output = json_encode(array('type'=>'message', 'text' => 'Thanks ' . $sender_name . ' for your message, <br> I will reply as fast as I can.'));
 		die($output);
 	}
 
-
-
-
-
 }
-
-?>
